@@ -1,0 +1,4 @@
+train: C:\Users\86138\Desktop\yolo\picture
+val: C:\Users\86138\Desktop\yolo\val
+nc: 2
+names: ['number','val-taget']
