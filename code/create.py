@@ -7,7 +7,6 @@ def generate_house_image(digit:str, output_path:str):
     # 创建白色背景的图像
     image = Image.new('RGB', (size, size), 'white')
     draw = ImageDraw.Draw(image)
-
     # 2. 计算房子的几何比例
     # 房子底部宽度设为 1m (对应640像素)
     base_width = size
