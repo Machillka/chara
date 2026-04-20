@@ -2,7 +2,7 @@ import ultralytics
 from ultralytics import YOLO
 
 # 加载预训练模型
-model = YOLO('yolov26m.pt')
+model = YOLO('yolov26m.pt')#一条注释（测试请忽略）
 
 # 训练配置（启用完整的数据增强）
 results = model.train(
