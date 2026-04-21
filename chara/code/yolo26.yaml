@@ -1,4 +1,0 @@
-train: ../picture/train
-val: ../picture/val
-nc: 2
-names: ['number','val-taget']
