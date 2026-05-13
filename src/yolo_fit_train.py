@@ -8,8 +8,8 @@ def train_custom_model():
 
     root_dir = os.path.dirname(current_dir)
 
-    yaml_path = os.path.join(current_dir, "yolo26.yaml")
-    model_path = os.path.join(current_dir, "yolo26m.pt")
+    yaml_path = os.path.join(current_dir, "yolov8.yaml")
+    model_path = os.path.join(current_dir, "yolov8n.pt")
 
     model = YOLO(model_path)
 
@@ -20,12 +20,10 @@ def train_custom_model():
         batch=16,
         device=0,
         workers=8,
-        mosaic=1.0,
-        mixup=0.15,
         degrees=10.0,
         translate=0.1,
         scale=0.5,
-        shear=2.0,
+        shear=0.0,
         perspective=0.0001,
         flipud=0.5,
         fliplr=0.5,
@@ -35,7 +33,7 @@ def train_custom_model():
         erasing=0.4,
         copy_paste=0.1,
         val=True,
-        optimizer="SGD",
+        optimizer="Auto",
         amp=True,
         exist_ok=True,
         project=os.path.join(root_dir, "runs/detect"),
