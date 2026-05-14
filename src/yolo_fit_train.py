@@ -8,8 +8,8 @@ def train_custom_model():
 
     root_dir = os.path.dirname(current_dir)
 
-    yaml_path = os.path.join(current_dir, "yolov8.yaml")
-    model_path = os.path.join(current_dir, "yolov8n.pt")
+    yaml_path = os.path.join(current_dir, "yolo.yaml")
+    model_path = os.path.join(current_dir, "yolo11n.pt")
 
     model = YOLO(model_path)
 
@@ -23,7 +23,7 @@ def train_custom_model():
         degrees=10.0,
         translate=0.1,
         scale=0.5,
-        shear=0.0,
+        shear=2.0,
         perspective=0.0001,
         flipud=0.5,
         fliplr=0.5,
