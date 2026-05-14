@@ -1,7 +1,7 @@
 task: detect
 mode: train
-model: E:\chara\src\yolo26m.pt
-data: E:\chara\src\yolo26.yaml
+model: E:\chara\src\yolov8n.pt
+data: E:\chara\src\yolov8.yaml
 epochs: 100
 time: null
 patience: 100
@@ -16,7 +16,7 @@ project: E:\chara\runs/detect
 name: chara_finetune
 exist_ok: true
 pretrained: true
-optimizer: SGD
+optimizer: AdamW
 verbose: true
 seed: 0
 deterministic: true
@@ -93,13 +93,13 @@ hsv_v: 0.4
 degrees: 10.0
 translate: 0.1
 scale: 0.5
-shear: 2.0
+shear: 0.0
 perspective: 0.0001
 flipud: 0.5
 fliplr: 0.5
 bgr: 0.0
 mosaic: 1.0
-mixup: 0.15
+mixup: 0.0
 cutmix: 0.0
 copy_paste: 0.1
 copy_paste_mode: flip
