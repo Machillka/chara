@@ -33,7 +33,7 @@ def train_custom_model():
         erasing=0.4,
         copy_paste=0.1,
         val=True,
-        optimizer="Auto",
+        optimizer="AdamW",
         amp=True,
         exist_ok=True,
         project=os.path.join(root_dir, "runs/detect"),
