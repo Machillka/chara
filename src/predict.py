@@ -11,10 +11,10 @@ def inference_task(detect_image_path: str):
     """
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    root_dir = os.path.dirname(current_dir)
+    root_dir = os.path.dirname(current_dir) 
 
     model = YOLO(
-        os.path.join(root_dir, "../runs/detect/chara_finetune/weights/best.pt")
+        os.path.join(current_dir, "../runs/detect/chara_finetune/weights/best.pt") #拼接的应该是current_dir和模型权重文件的相对路径
     )
 
     results = model.predict(source=detect_image_path, conf=0.25, save=True)
